@@ -6,12 +6,15 @@
     "test:playwright": "playwright test --headed",
     "test.watch": "jest --watchAll",
     "test:record": "npx playwright codegen https://www.saucedemo.com/",
+    "clean": "rimraf test-results",
+    "pretest": "npm run clean",
     "allureReport": "allure serve",
     "format": "prettier --write .",
     "lint": "eslint . --ext .ts,.js"
   },
   "dependencies": {
     "allure-playwright": "^3.0.5",
+    "rimraf": "6.0.1",
     "axios": "^1.7.7",
     "config": "^3.3.12",
     "csv-parse": "5.5.6",
